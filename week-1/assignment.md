@@ -12,5 +12,5 @@ The task is to finish **first 15 levels** from **OverTheWire Bandit wargames** :
 ### Submission Guidelines
 - Make a **markdown file** of your writeup, level wise. **Detail every technique and command** you used to get the password. For a **basic template** look at [this](assignment-submissions/aayush_anand-230025.md).
 - File naming convention : `firstname_middlename_surname-rollnumber.md`
-- Fork this repository and make a **pull request** with your file in this folder.
+- Fork this repository and make a **pull request** with your file in [assignment-submissions](assignment-submissions/) folder.
 - **Plagiarism is strictly prohibited and can lead to deratification**.
