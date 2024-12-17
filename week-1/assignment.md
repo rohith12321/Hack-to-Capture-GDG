@@ -10,7 +10,7 @@ The task is to finish **first 15 levels** from **OverTheWire Bandit wargames** :
 **Note** : As this is a reputed resource to learn about linux commands, there are already a lot of writeups present on internet. But you should, try your best to solve every level on your own without looking at others solutions.
 
 ### Submission Guidelines
-- Make a **markdown file** of your writeup, level wise. For a **template** look at [this](assignment-submissions/aayush_anand-230025.md).
+- Make a **markdown file** of your writeup, level wise. **Detail every technique and command** you used to get the password. For a **basic template** look at [this](assignment-submissions/aayush_anand-230025.md).
 - File naming convention : `firstname_middlename_surname-rollnumber.md`
 - Fork this repository and make a **pull request** with your file in this folder.
 - **Plagiarism is strictly prohibited and can lead to deratification**.
