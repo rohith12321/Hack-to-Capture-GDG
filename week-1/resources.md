@@ -28,3 +28,52 @@
    - Option 2: Install Kali Linux using WSL [Watch this tutorial](https://www.youtube.com/watch?v=1gHrI9qgH3w).
 
 9. **Learn Python**
+
+
+### Meeting Summary(17/10/24) 
+
+##### Basic Commands 
+- man
+- pwd
+- cd
+- ls
+- touch
+- file
+- cat
+- less
+- history
+- cp
+- mv
+- mkdir
+- rm
+- find
+- help
+- man
+- whatis
+- env
+-----------
+##### Text manipulation and navigation
+
+- changing stdout
+- changing stdin
+- changing stderr
+- pipe
+- head
+- tail
+- grep
+
+----------
+##### Roles and management
+- users, groups
+- root
+- /etc/passwd file
+- /etc/shadow file
+- /etc/group file
+
+---------
+##### Permissions
+- file permissions
+- modifying permissions
+- ownership permissions
+- setuid
+- setgid
