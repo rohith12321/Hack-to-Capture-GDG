@@ -48,6 +48,7 @@ Flag : `flag{congrats_on_another_flag}`
 ## Challenge - 3
 You were given a list of decimal numbers and a hint that these represent a QR code. The trick here was to notice that there are total `29` lines present and a standard Version-3 QR code has `29x29` pixels. Pixels(white and black) can be mapped to binary digits 0 and 1, and then binary numbers can be converted to decimal! So, we exactly do this, convert decimal numbers back to binary. Then make each binary string length 29 by padding it with extra zeroes in front, and then convert it to a qr code. 
 We obtain finally this qr code : 
+
 ![image](https://github.com/user-attachments/assets/432e1047-4059-49a8-b203-1722f0928a8d)
 
 On scanning this, we get base64 encoded text
