@@ -1,6 +1,6 @@
 ## Week 1
 
-### Prereqs
+### 1) Prereqs
 
 1. **Learn the Basics of Number Systems**  
    Study number systems and their types [here](https://www.rapidtables.com/math/number/Numeral_system.html).
@@ -30,7 +30,7 @@
 9. **Learn Python**
 
 
-### Meeting Summary(17/10/24) 
+### 2) Meeting Summary(17/10/24) 
 
 ##### Basic Commands 
 - man
@@ -78,7 +78,7 @@
 
 
 ---
-### More resources on Linux, Bash scripting, Python scripting
+### 3) More resources on Linux, Bash scripting, Python scripting
 - Basics of linux : 
    - http://linuxcommand.org/
    - https://linuxsurvival.com/
