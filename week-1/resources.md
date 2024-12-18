@@ -51,7 +51,7 @@
 - man
 - whatis
 - env
------------
+
 ##### Text manipulation and navigation
 
 - changing stdout
@@ -62,7 +62,6 @@
 - tail
 - grep
 
-----------
 ##### Roles and management
 - users, groups
 - root
@@ -70,10 +69,29 @@
 - /etc/shadow file
 - /etc/group file
 
----------
 ##### Permissions
 - file permissions
 - modifying permissions
 - ownership permissions
 - setuid
 - setgid
+
+
+---
+### More resources on Linux, Bash scripting, Python scripting
+- Basics of linux : 
+   - http://linuxcommand.org/
+   - https://linuxsurvival.com/
+   - [basics](https://d00mfist.gitbooks.io/ctf/content/basics_of_linux.html)
+   - [Ryans turtorials](https://ryanstutorials.net/linuxtutorial/)
+   - [Linux Sea](https://web.archive.org/web/20200427183624/http://swift.siphos.be/linux_sea/)
+- Linux commands cheat sheet : [link](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fisnefnt32wn21.jpg%3Fauto%3Dwebp%26s%3Db6c48a27ab33a3d428b554d278eba617e35bf3a2)
+- Unix File system : [link](https://homepages.uc.edu/~thomam/Intro_Unix_Text/File_System.html)
+- Bash Scripting : 
+   - [resource 1](https://linuxhint.com/3hr_bash_tutorial/)
+   - [resource 2](https://web.archive.org/web/20241123054849/https://help.ubuntu.com/community/Beginners/BashScripting)
+   - [resource 3 : Bash-hackers](https://web.archive.org/web/20230328220001/https://wiki.bash-hackers.org/start)
+   - [resource 4 : Advance Bash Scripting](https://web.archive.org/web/20241216102232/https://tldp.org/LDP/abs/html/index.html)
+   - [practice resource 1](https://exercism.org/tracks/bash)
+   - [practice resource 2](https://tryhackme.com/r/room/bashscripting)
+- Python scripting : [link](https://linuxhint.com/python_scripts_beginners_guide/)
