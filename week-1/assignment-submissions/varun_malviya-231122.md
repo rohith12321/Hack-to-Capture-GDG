@@ -1,7 +1,7 @@
-LEVEL 0 
+## LEVEL 0 
 ssh bandit0@bandit.labs.overthewire.org -p 2220 -l bandit0
 
-LEVEL 1
+## LEVEL 1
 bandit0@bandit:~$ pwd
 /home/bandit0
 bandit0@bandit:~$ find readme.txt
@@ -24,7 +24,7 @@ contribute to the OverTheWire community so we can keep these games free!
 The password you are looking for is: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 
-LEVEL 2
+## LEVEL 2
 bandit1@bandit:~$ ls
 -
 bandit1@bandit:~$ pwd
