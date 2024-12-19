@@ -28,13 +28,13 @@ ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 
 ## LEVEL 2
-To retrieve the password for Level 2, I followed these steps:
+- To retrieve the password for Level 2, I followed these steps:
 Connected to the host using the SSH command.
-Confirmed the current working directory using the pwd command, which displayed /home/bandit1.
-Listed the directory contents using the ls command and found a file named -.
-Checked the file type using the file command, which revealed it was an ASCII text file.
-Used input redirection with the cat command to read the file’s content and retrieve the password.
-The password is: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx.
+- Confirmed the current working directory using the pwd command, which displayed /home/bandit1.
+- Listed the directory contents using the ls command and found a file named -.
+- Checked the file type using the file command, which revealed it was an ASCII text file.
+- Used input redirection with the cat command to read the file’s content and retrieve the password.
+- The password is: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx.
 
 ## LEVEL 3
 
