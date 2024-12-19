@@ -2,8 +2,8 @@
 - ssh bandit0@bandit.labs.overthewire.org -p 2220 -l bandit0
 
 ## LEVEL 1
-To retrieve the password for Level 1, I followed these steps:
-Connected to the host using the SSH command:
+- To retrieve the password for Level 1, I followed these steps:
+- Connected to the host using the SSH command:
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 Used the pwd command to confirm the current working directory:
 /home/bandit0
@@ -22,7 +22,9 @@ Used ls -1 for a cleaner, one-file-per-line display.
 Opened the readme file to retrieve the password using the cat command:
 cat readme
 Result: Displayed the password for Level 1.
-The password  is: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+The password is:
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+Connected to Level 1 using the SSH command:
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 
 ## LEVEL 2
