@@ -29,7 +29,7 @@
 
 9. **Learn Python**
 
-
+---
 ### 2) Meeting Summary(17/10/24) 
 
 ##### Basic Commands 
@@ -83,7 +83,7 @@
    - http://linuxcommand.org/
    - https://linuxsurvival.com/
    - [basics](https://d00mfist.gitbooks.io/ctf/content/basics_of_linux.html)
-   - [Ryans turtorials](https://ryanstutorials.net/linuxtutorial/)
+   - [Ryans tutorials](https://ryanstutorials.net/linuxtutorial/)
    - [Linux Sea](https://web.archive.org/web/20200427183624/http://swift.siphos.be/linux_sea/)
 - Linux commands cheat sheet : [link](https://www.reddit.com/media?url=https%3A%2F%2Fpreview.redd.it%2Fisnefnt32wn21.jpg%3Fauto%3Dwebp%26s%3Db6c48a27ab33a3d428b554d278eba617e35bf3a2)
 - Unix File system : [link](https://homepages.uc.edu/~thomam/Intro_Unix_Text/File_System.html)
