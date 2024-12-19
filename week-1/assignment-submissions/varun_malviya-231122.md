@@ -33,7 +33,8 @@ Connected to the host using the SSH command.
 - Confirmed the current working directory using the pwd command, which displayed /home/bandit1.
 - Listed the directory contents using the ls command and found a file named -.
 - Checked the file type using the file command, which revealed it was an ASCII text file.
-- Used input redirection with the cat command to read the file’s content and retrieve the password.
+- Used input redirection with the cat command to read the file’s content and retrieve the password:
+cat <-
 - The password is: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx.
 
 ## LEVEL 3
