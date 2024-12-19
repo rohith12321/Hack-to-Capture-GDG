@@ -1,5 +1,5 @@
 ## LEVEL 0 
-ssh bandit0@bandit.labs.overthewire.org -p 2220 -l bandit0
+-ssh bandit0@bandit.labs.overthewire.org -p 2220 -l bandit0
 
 ## LEVEL 1
 To retrieve the password for Level 1, I followed these steps:
