@@ -141,3 +141,25 @@ gzip -d data8.gz
 cat data8
 ```
 #### PASSWORD -> FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn ####
+# LEVEL 14 #
+Looking at the man page of ssh i found the -i option which tells SSH to use the specified file as the private key for the authentication process. Thus I used sshkey.private and connected to the server using the following
+```
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+```
+# LEVEL 15 #
+We get the password according the instructions given in the previous level
+```
+cd ..
+cd ..
+cat /etc/bandit_pass/bandit14
+```
+#### PASSWORD TO BE USED -> MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS ####
+I searched how to connect to localhost on a particular port , and I found that netcat allows us to do it as follows
+```
+nc localhost 30000
+```
+On entering the password above I get the following password
+#### PASSWORD -> 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo ####
+ 
+
+
