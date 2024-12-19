@@ -2,26 +2,48 @@
 ssh bandit0@bandit.labs.overthewire.org -p 2220 -l bandit0
 
 ## LEVEL 1
-bandit0@bandit:~$ pwd
-/home/bandit0
-bandit0@bandit:~$ find readme.txt
-find: ‘readme.txt’: No such file or directory
-bandit0@bandit:~$ find readme
-readme
-bandit0@bandit:~$ file readme
-readme: ASCII text
-bandit0@bandit:~$ ls
-readme
-bandit0@bandit:~$ ls -1
-readme
-bandit0@bandit:~$ cat readme
-Congratulations on your first steps into the bandit game!!
-Please make sure you have read the rules at https://overthewire.org/rules/
-If you are following a course, workshop, walkthrough or other educational activity,
-please inform the instructor about the rules as well and encourage them to
-contribute to the OverTheWire community so we can keep these games free!
+To retrieve the password for Level 1, I followed these steps:
 
-The password you are looking for is: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+Connected to the host using the SSH command:
+
+bash
+Copy code
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+Used the pwd command to confirm the current working directory:
+
+bash
+Copy code
+/home/bandit0
+Searched for the password file using the find command:
+
+Initially searched for readme.txt:
+bash
+Copy code
+find readme.txt
+Result: File not found.
+Adjusted the search to locate a file named readme:
+bash
+Copy code
+find readme
+Verified the file type using the file command:
+
+bash
+Copy code
+file readme
+Result: Confirmed it was an ASCII text file.
+
+Listed the directory contents to ensure the readme file was present:
+
+Used ls to display all files.
+Used ls -1 for a cleaner, one-file-per-line display.
+Opened the readme file to retrieve the password using the cat command:
+
+bash
+Copy code
+cat readme
+Result: Displayed the password for Level 1.
+
+The password  is: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 ssh bandit1@bandit.labs.overthewire.org -p 2220
 
 ## LEVEL 2
