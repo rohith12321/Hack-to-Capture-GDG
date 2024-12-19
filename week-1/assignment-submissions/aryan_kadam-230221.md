@@ -57,4 +57,51 @@ cat ./maybehere07/.file2
 ```
 We used the -size option and specified that 1033 bytes (c represents bytes) is the size of the file we are looking for along with the -readable and ! -executable option where ! stands for 'not'.
 #### PASSWORD -> HWasnPhtq9AVKe0dmk45nxy20cvUa6EG ####
-
+# LEVEL 7 #
+Given that we want to find the password which is stored somehwere on the server with the following properties 
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
+On doing ls we don't get anything significant thus we perfom a search for the file starting from the root with the above properties using the following command
+```
+find / -type f -size 33c -user bandit7 -group bandit6
+```
+On doing this we get a list of paths to different files among which one is /var/lib/dpkg/info/bandit7.password. Inorder to navigate to var we need to be in the root so we execute the following commands
+```
+cd /
+cat /var/lib/dpkg/info/bandit7.password
+```
+#### PASSWORD -> morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj ####
+# LEVEL 8 #
+This is a simple task involving the use of the grep command.
+```
+grep "millionth" data.txt
+```
+#### PASSWORD -> dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc ####
+# LEVEL 9 #
+Inorder to solve this question we need to understand how the command works. When we only use uniq it compares only the consecutive lines therefore uniq -u  (-u only prints unique lines => man uniq ) . uniq -u command will return only the lines that occur exactly once among the consecutive lines in its input. So inorder to bring all the occurences together I sorted the file and then used uniq command as follows
+```
+sort data.txt | uniq -u
+```
+#### PASSWORD -> 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM ####
+# LEVEL 10 #
+Given that the password is stored in data.txt after a set of 'equal to' signs in one of the human-readable strings , we can use the strings command . On opening the man page for strings we find 
+"strings - print the sequences of printable characters in files " which is why this command can be used to find the password. On using this we find 4 strings which have several equal to signs but only one looks like a password i.e D9========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey.
+```
+strings data.txt
+```
+#### PASSWORD -> FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey ####
+# LEVEL 11 #
+Using the man page of base64 we see that inorder to decode a file we use the -d option , so its simple enough
+```
+base64 -d data.txt
+```
+The text translates to the password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr.
+#### PASSWORD -> dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr ####
+# LEVEL 12 #
+This is ROT13 cipher , so we can use translate command (tr) . When A is shifted 13 times it becomes a N. This is the transformation which we give to the command as follows
+```
+tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt
+```
+#### PASSWORD -> 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4 ####
+# LEVEL 13 #
