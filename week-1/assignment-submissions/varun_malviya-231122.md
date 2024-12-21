@@ -37,7 +37,30 @@ Connected to the host using the SSH command.
 cat <-
 - The password is: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx.
 
+
 ## LEVEL 3
+- bandit2@bandit:~$ ls
+spaces in this filename
+bandit2@bandit:~$ file spaces in the file name
+spaces: cannot open `spaces' (No such file or directory)
+in:     cannot open `in' (No such file or directory)
+the:    cannot open `the' (No such file or directory)
+file:   cannot open `file' (No such file or directory)
+name:   cannot open `name' (No such file or directory)
+bandit2@bandit:~$ file spaces\in\this\filename
+spacesinthisfilename: cannot open `spacesinthisfilename' (No such file or directory)
+bandit2@bandit:~$ file spaces in this filename
+spaces:   cannot open `spaces' (No such file or directory)
+in:       cannot open `in' (No such file or directory)
+this:     cannot open `this' (No such file or directory)
+filename: cannot open `filename' (No such file or directory)
+bandit2@bandit:~$ file spaces\ in\ this\ filename
+spaces in this filename: ASCII text
+bandit2@bandit:~$ cat spaces\ in\ this\ filename
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+
+
 
 
 
