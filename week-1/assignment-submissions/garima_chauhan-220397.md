@@ -120,6 +120,59 @@ $ cat data.txt | tr 'a-z' 'n-za-m' | tr 'A-Z' 'N-ZA-M'
 
 ## Level 12
 password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+just kept uncompressing and uncompressing(going to different directory was a hint)
+
+```bash
+$ dir_name=$(mktemp -d) 
+$ cp data.txt $dir_name
+$ cd $dir_name
+$ file data.txt # got ASCII
+$ xxd -r data.txt > data2.bin
+$ file data2.bin
+$ mv data2.bin data2.gz && gunzip data2.gz
+$ ls
+$ file data2
+$ bunzip2 data2
+$ file data2.out
+$ mv data2.out data3.gz && gunzip data3.gz
+$ ls
+$ file data3
+$ tar -x -f data3
+$ ls
+$ file data5.bin
+$ tar -x -f data5.bin
+$ ls
+$ file data6.bin
+$ bunzip2 data6.bin
+$ file data6.bin.out
+$ tar -xf data6.bin.out
+$ file data8.bin
+$ mv data8.bin data8.gz && gunzip data8.gz
+$ file data8
+$ cat data8
+```
 ## Level 13
+password: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+https://unix.stackexchange.com/questions/23291/how-to-ssh-to-remote-server-using-a-private-key
+
+then cd /etc/bandit_pass/
+and cat bandit14
+
+```bash
+$ ls
+$ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+$ cd /etc/bandit_pass/
+$ cat bandit14
+```
+
 ## Level 14
+password: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+```bash
+$ cat /etc/bandit_pass/bandit14 | nc 127.0.0.1 30000
+```
+
 ## Level 15
+password: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
