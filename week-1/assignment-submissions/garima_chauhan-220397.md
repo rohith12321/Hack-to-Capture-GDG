@@ -75,11 +75,51 @@ $ cat ./var/lib/dpkg/info/bandit7.password
 ```
 ## Level 7
 password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+```bash
+$ ls
+$ grep millionth data.txt
+```
 ## Level 8
+password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+we need to sort first, grep also found lines with 10
+
+```bash
+$ ls
+$ sort data.txt | uniq -c | grep 1
+```
+
 ## Level 9
+password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+```bash
+$ ls
+$ strings -a data.txt | grep =
+```
 ## Level 10
+password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+output: The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+```bash
+$ ls
+$ strings data.txt | base64 -di
+```
 ## Level 11
+password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+https://stackoverflow.com/questions/6441260/how-to-shift-each-letter-of-the-string-by-a-given-number-of-letters
+
+output: The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+```bash
+$ ls
+$ cat data.txt | tr 'a-z' 'n-za-m' | tr 'A-Z' 'N-ZA-M'
+```
+
 ## Level 12
+password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 ## Level 13
 ## Level 14
 ## Level 15
