@@ -170,7 +170,7 @@ Explanation: mktemp -d creates a new temporary directory. The output here is /tm
 
 - Copying the Data File:
 
-Command: cp ~/data.txt .
+Command: used cp  .
 Explanation: This command copies the data.txt file from the home directory (~) to the temporary directory 
 - Renaming the File:
 
