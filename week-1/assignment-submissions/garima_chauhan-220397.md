@@ -62,7 +62,19 @@ $ cat ./maybehere07/.file2
 ```
 ## Level 6
 password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+
+since server written so should go to /
+
+```bash
+$ cd ..
+$ cd ..
+$ ls
+$ find -user bandit7 -group bandit6 -size 33c
+$ cat ./var/lib/dpkg/info/bandit7.password
+```
 ## Level 7
+password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 ## Level 8
 ## Level 9
 ## Level 10
