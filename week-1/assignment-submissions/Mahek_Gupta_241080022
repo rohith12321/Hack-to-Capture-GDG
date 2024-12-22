@@ -1,0 +1,127 @@
+WRITEUPS
+
+Level 0-1
+use ssh connection for bandit 0 to extract password from it for bandit 1
+#ssh bandit0@bandit.labs.overthewire.org -p 2220
+#ls
+#cat readme
+password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+
+level 1-2
+use ssh connection for bandit 1 to extract password from it for bandit 2
+#ssh bandit1@bandit.labs.overthewire.org -p 2220
+#ls
+#cat /home/bandit1/-
+password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+level 2-3
+use ssh connection for bandit 2 to extract password from it for bandit 3
+#ssh bandit2@bandit.labs.overthewire.org -p 2220
+#ls
+#cat spaces\ in\ this\ filename
+password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+level 3-4
+use ssh connection for bandit 3 to extract password from it for bandit 4
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+#cd inhere
+#ls -a
+#cat
+password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+level 4-5
+use ssh connection for bandit 4 to extract password from it for bandit 5
+#ssh bandit4@bandit.labs.overthewire.org -p 2220
+#cd inhere
+#ls -a
+#file filename (to get file)
+#cat
+password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+level 5-6
+use ssh connection for bandit 5 to extract password from it for bandit 6
+#ssh bandit5@bandit.labs.overthewire.org -p 2220
+#ls -la inhere
+#find inhere -type f -size 1033c
+#find inhere -type f -size 1033c ! -executable
+#file ./maybehere07/.file2 (for ascii)
+password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+level 6-7
+use ssh connection for bandit 6 to extract password from it for bandit 7
+#ssh bandit6@bandit.labs.overthewire.org -p 2220
+#find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+#cat ./path/to/file
+password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+level 7-8
+use ssh connection for bandit 7 to extract password from it for bandit 8
+#ssh bandit7@bandit.labs.overthewire.org -p 2220
+#grep "millionth" data.txt
+password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+level 8-9
+use ssh connection for bandit 8 to extract password from it for bandit 9
+#ssh bandit8@bandit.labs.overthewire.org -p 2220
+#sort data.txt | uniq -u
+password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+level 9-10
+use ssh connection for bandit 9 to extract password from it for bandit 10
+#ssh bandit9@bandit.labs.overthewire.org -p 2220
+#strings data.txt | grep -E "=+"
+password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+level 10-11
+use ssh connection for bandit 10 to extract password from it for bandit 11
+#ssh bandit10@bandit.labs.overthewire.org -p 2220
+#base64 -d data.txt
+password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+level 11-12
+use ssh connection for bandit 11 to extract password from it for bandit 11
+#ssh bandit11@bandit.labs.overthewire.org -p 2220
+#cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+level 12-13
+use ssh connection for bandit 12 to extract password from it for bandit 13
+#ssh bandit12@bandit.labs.overthewire.org -p 2220
+#mkdir -p $(mktemp -d)
+#temp_dir=$(mktemp -d)
+#cd "$temp_dir"
+#cp data.txt .
+#xxd -r compressed_file.hex > binary_file
+#file binary_file
+#repeat process several time to extract the data from bzip, gzip, tar
+#cat
+password: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+level 13-14
+use ssh connection for bandit 13 to extract password from it for bandit 14
+#ssh bandit13@bandit.labs.overthewire.org -p 2220
+#ssh bandit14@localhost -p 2220
+#ssh bandit14@localhost -i sshkey.private -p 2220
+#cat /etc/bandit_pass/bandit14
+password: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+level 14-15
+use ssh connection for bandit 14 to extract password from it for bandit 15
+#ssh -i sshkey.private bandit14@localhost
+#cat /etc/bandit_pass/bandit14
+#nc localhost 30000
+password: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
