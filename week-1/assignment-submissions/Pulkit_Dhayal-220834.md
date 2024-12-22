@@ -62,7 +62,7 @@ password : dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 ```
 
 ## LEVEL 11-12
-the data iss ROT13 encoded we can decode using tar as
+the data iss ROT13 encoded we can decode using tr as
 ```bash 
 >> tr 'A-Za-z' 'N-ZA-Mn-za-m' < data.txt  // string to string match 
 password : 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
