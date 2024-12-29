@@ -30,3 +30,20 @@ file secret_key1.asc
 file secret_key2.asc
 file public_key.asc
 ```
+Now one file in an other directory is a PNG image, so using zsteg on it to analyse for stegranography. Seeing that it has 127 bytes extra data after image, copied it onto another file to analyze.
+
+```bash
+zsteg 128C03
+dd if=128C03 of=extradata.bin bs=1 skip=2134264 count=137
+file extradata.bin
+strings extradata.bin
+```
+
+```bash
+unrar x 0
+```
+Again the content was just 1.png and 3.png, these were also observed when we extracted the rar file.
+
+So checking the other files.
+
+
