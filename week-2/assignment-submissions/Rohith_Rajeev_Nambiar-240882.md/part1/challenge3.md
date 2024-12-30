@@ -4,46 +4,79 @@ binwalk --dd=".*" Santa.rar
 ```
 
 Observed that this extraction gave rise to 3 directories, now opened each of them and checked for the files. I saw 2 images in one of the directories.
-Used zsteg to check for data in these.
+Ran exiftool and binwalk on these images to extract whatever extra present.
 ```bash
-zsteg 3.png
-zsteg 1.png
+cd _Santa.rar.extracted
+ls
+exiftool 1.png
+exiftool 3.png
+binwalk --dd=".*" 1.png
+binwalk --dd=".*" 3.png
+ls
 ```
-'1169169 bytes of extra data after image end (IEND), offset = 0xccb6' - This was the result from the first command.
-
-So I copied only the later files into a different file to analyze it further. The offset is the value to skip.
-
-```bash
-dd if=3.png of=extra_data.bin bs=1 skip=84022
-file extra_data_bin
-strings extra_data_bin
-```
-This is of data filetype. So checked for strings but found nothing interesting.
-
-The second command gave some secret key and public key in some lines. So hoping that this will give some info.
+Now there are more directories which are the binwalk extracted portions from the image. Checking these directories for clues.
 
 ```bash
-zsteg -E b1,b,lsb,xy 1.png > secret_key1.asc
-zsteg -E b4,b,lsb,xy 1.png > public_key.asc 
-zsteg -E b3,bgr,msb,xy 1.png > secret_key2.asc
-file secret_key1.asc
-file secret_key2.asc
-file public_key.asc
+cd _3.png.extracted
+ls
+file *
+exiftool 0
+exiftool CCB6
 ```
-Now one file in an other directory is a PNG image, so using zsteg on it to analyse for stegranography. Seeing that it has 127 bytes extra data after image, copied it onto another file to analyze.
+The first image has trailer data while the second image is safe.
 
 ```bash
-zsteg 128C03
-dd if=128C03 of=extradata.bin bs=1 skip=2134264 count=137
-file extradata.bin
-strings extradata.bin
+binwalk --dd=".*" 0
+ls
+cd _0.extracted
+file *
+exifitool 0
+exiftool CCB6
+binwalk --dd=".*" 0
+ls
+cd _0.extracted
 ```
+Here we observe that binwalk extraction is just giving the same file again and again, so maybe 3.png does not contain any secret data of our use.
 
 ```bash
-unrar x 0
+cd ~/Downloads/_Santa.rar.extracted
+ls
+cd _1.png.extracted
+file *
+exiftool 36
+binwalk --dd=".*" 36
 ```
-Again the content was just 1.png and 3.png, these were also observed when we extracted the rar file.
+No result from binwalk, so we check the binary data using -b
 
-So checking the other files.
+```bash
+exiftool -b -RedToneReproductionCurve 36 > red_curve.bin
+exiftool -b -GreenToneReproductionCurve 36 > green_curve.bin
+exiftool -b -BlueToneReproductionCurve 36 > blue_curve.bin
+```
+But checking these reveal empty documents, so maybe this also doesn't contain anything.
+
+```bash
+cd ~/Downloads/_Santa.rar.extracted/_1.png-0.extracted
+ls
+cd _0.extracted
+```
+Again same problem, so now we stop checking this Santa extraction and start checking the other one.
+
+```bash
+cd ~/Downloads/_Santa.rar-1.extracted
+file *
+binwalk --dd=".*" 7C66D
+```
+
+Ran binwalk on the weird looking file and there were many extractions.
+
+```bash
+cd _7C66D.extracted
+file *
+exiftool AC596
+binwalk --dd=".*" AC596
+cd _AC596.extracted
+file *
+
 
 
