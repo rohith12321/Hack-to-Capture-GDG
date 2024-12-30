@@ -16,7 +16,9 @@ cd mov
 ls
 file 00000000.mov
 ```
-This file does not support zsteg, binwalk gives no results. So trying foremost again gives some result but it is the same file again.
+Running exiftool on this file tells that the media is at an offset of 8160.
+
+This file does not support zsteg, binwalk gives no results.
 ```bash
 zsteg 00000000.mov
 binwalk -e ~/Downloads/output/mov/00000000.mov
