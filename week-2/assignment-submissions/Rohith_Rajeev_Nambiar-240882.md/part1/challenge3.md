@@ -4,6 +4,7 @@ binwalk --dd=".*" Santa.rar
 ```
 
 Observed that this extraction gave rise to 3 directories, now opened each of them and checked for the files. I saw 2 images in one of the directories.
+
 Ran exiftool and binwalk on these images to extract whatever extra present.
 ```bash
 cd _Santa.rar.extracted
